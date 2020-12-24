@@ -8,8 +8,8 @@
 		</view>
 		<view class="user-actions">
 			<u-cell-group>
-				<u-cell-item icon="share" title="亲友"></u-cell-item>
-				<u-cell-item icon="share" title="时间"></u-cell-item>
+				<u-cell-item icon="server-man" title="亲友配置" @click="goTo('/pages/user/friends/add')"></u-cell-item>
+				<u-cell-item icon="order" title="账单配置"></u-cell-item>
 			</u-cell-group>
 		</view>
 	</view>
@@ -30,7 +30,7 @@
 		onLoad() {
 			_that = this;
 		}
-		onGotUserInfo (e) {
+		onGotUserInfo (e: any) {
 			console.log('aaaaa', e);
 			rawData = e.detail.rawData;
 			if (e.detail.iv) {

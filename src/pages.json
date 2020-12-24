@@ -20,6 +20,12 @@
 				"style" : {
 					"navigationBarTitleText": "个人中心"
 				}
+		},
+		{
+				"path" : "pages/user/friends/add",
+				"style" : {
+					"navigationBarTitleText": "增加亲友"
+				}
 		}
     ],
 	"globalStyle": {

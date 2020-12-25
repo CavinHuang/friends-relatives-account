@@ -16,15 +16,27 @@
 			}
 		},
 		{
+			"path" : "pages/timeline/index",
+			"style" : {
+				"navigationBarTitleText": "流水"
+			}
+		},
+		{
 			"path" : "pages/user/index",
 			"style" : {
 				"navigationBarTitleText": "个人中心"
 			}
 		},
 		{
-			"path" : "pages/timeline/index",
+			"path" : "pages/user/friends/index",
 			"style" : {
-				"navigationBarTitleText": "流水"
+				"navigationBarTitleText": "我的亲友"
+			}
+		},
+		{
+			"path" : "pages/user/friends/add",
+			"style" : {
+				"navigationBarTitleText": "增加亲友"
 			}
 		}
   ],

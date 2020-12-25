@@ -8,8 +8,8 @@
 		</view>
 		<view class="user-actions">
 			<u-cell-group>
-				<u-cell-item icon="share" title="亲友配置"></u-cell-item>
-				<u-cell-item icon="share" title="账单配置"></u-cell-item>
+				<u-cell-item icon="server-man" title="亲友配置" @click="goTo('/pages/user/friends/index')"></u-cell-item>
+				<u-cell-item icon="order" title="账单配置"></u-cell-item>
 			</u-cell-group>
 		</view>
 	</view>
@@ -24,11 +24,6 @@ export default class Index extends Vue {
 	state = {
 		userInfo: null,
 		isLogin: false
-	}
-	onShow() {
-	}
-	onLoad() {
-		_that = this;
 	}
 	onGotUserInfo (e) {
 		console.log('aaaaa', e);

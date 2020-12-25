@@ -18,7 +18,7 @@
 </template>
 <script lang="ts">
 import { Component,Vue ,Watch} from "vue-property-decorator";
-import indexList from "@/_tmp/index.js";
+import indexList from "@/_tmp";
 const letterArr = indexList.list.map(val => {
 	return val.letter;
 })
@@ -27,7 +27,7 @@ export default class Index extends Vue {
 	scrollTop = 0
 	indexList = letterArr
 	list = indexList.list
-	onPageScroll(e) {
+	onPageScroll(e: any) {
 		this.scrollTop = e.scrollTop;
 	}
 }

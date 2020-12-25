@@ -25,7 +25,7 @@ export default class Index extends Vue {
 		userInfo: null,
 		isLogin: false
 	}
-	onGotUserInfo (e) {
+	onGotUserInfo (e: any) {
 		console.log('aaaaa', e);
 		if (e.detail.iv) {
 			this.state.userInfo = e.detail.userInfo;

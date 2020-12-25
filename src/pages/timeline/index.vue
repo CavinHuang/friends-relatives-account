@@ -8,13 +8,13 @@
 						<view class="year-text">2020</view>
 					</view>
 					<view class="group-total">
-						<view class="group-total-title">-2000</view>
+						<view class="group-total-title">-2000 <text class="tips">结余</text></view>
 						<view class="group-total-all">
 							<view class="income-text">
 								<text class="income-title">收入</text>
 								<text class="income-number">0.00</text>
 							</view>
-							|
+							<view class="line-1"></view>
 							<view class="income-text">
 								<text class="income-title out-title">支出</text>
 								<text class="income-number">2000</text>
@@ -193,6 +193,19 @@ export default class Index extends Vue {
 	}
 	.out-title {
 		color: $u-type-success-disabled;
+	}
+	.line-1 {
+		margin-right: 20upx;
+		margin-left: 20upx;
+		margin-top: 6upx;
+		height: 20upx;
+		width: 1px;
+		background: rgba(0, 0, 0, 0.4);
+	}
+	.tips {
+		color: rgba(0, 0, 0, 0.4);
+		font-size: 20upx;
+		margin-left: 20upx;
 	}
 }
 .timeline-body {

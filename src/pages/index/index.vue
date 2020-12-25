@@ -7,23 +7,7 @@
 		<u-button type="primary">uView 按钮</u-button>
 		<navigator url="/pages/add/index">记账</navigator>
 		<navigator url="/pages/user/index">个人中心</navigator>
-		<u-table>
-				<u-tr>
-					<u-th>学校</u-th>
-					<u-th>班级</u-th>
-					<u-th>年龄</u-th>
-				</u-tr>
-				<u-tr>
-					<u-td>浙江大学</u-td>
-					<u-td>二年级</u-td>
-					<u-td>22</u-td>
-				</u-tr>
-				<u-tr>
-					<u-td>清华大学</u-td>
-					<u-td>05班</u-td>
-					<u-td>20</u-td>
-				</u-tr>
-			</u-table>
+		<navigator url="/pages/timeline/index">流水</navigator>
 	</view>
 </template>
 

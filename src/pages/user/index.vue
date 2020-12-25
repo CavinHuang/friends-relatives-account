@@ -8,51 +8,51 @@
 		</view>
 		<view class="user-actions">
 			<u-cell-group>
-				<u-cell-item icon="share" title="亲友"></u-cell-item>
-				<u-cell-item icon="share" title="时间"></u-cell-item>
+				<u-cell-item icon="share" title="亲友配置"></u-cell-item>
+				<u-cell-item icon="share" title="账单配置"></u-cell-item>
 			</u-cell-group>
 		</view>
 	</view>
 </template>
 
 <script lang="ts">
-	import { Component,Vue ,Watch} from "vue-property-decorator";
-	var rawData, _that;
+import { Component,Vue ,Watch} from "vue-property-decorator";
+import commonApi from '@/global/service/commonService'
 
-	@Component({}) //必须
-	export default class Index extends Vue {
-		state = {
-			userInfo: null,
-			isLogin: false
-		}
-		onShow() {
-		}
-		onLoad() {
-			_that = this;
-		}
-		onGotUserInfo (e) {
-			console.log('aaaaa', e);
-			rawData = e.detail.rawData;
-			if (e.detail.iv) {
-				this.state.userInfo = e.detail.userInfo;
-				this.state.isLogin = true
-				uni.login({
-					provider: 'weixin',
-					success: function(loginRes) {
-						console.log(loginRes);
-						// console.log(rawData)
-					}
-				});
-			} else {
-				uni.showToast({
-					title: '用户拒绝授权',
-					icon: 'none'
-				});
-			}
-		}
-
+@Component({}) //必须
+export default class Index extends Vue {
+	state = {
+		userInfo: null,
+		isLogin: false
 	}
-
+	onShow() {
+	}
+	onLoad() {
+		_that = this;
+	}
+	onGotUserInfo (e) {
+		console.log('aaaaa', e);
+		if (e.detail.iv) {
+			this.state.userInfo = e.detail.userInfo;
+			this.state.isLogin = true
+			uni.login({
+				provider: 'weixin',
+				success: function(loginRes) {
+					console.log(loginRes);
+					commonApi.saveUserInfo({
+						...e.detail.userInfo,
+						jscode: loginRes.code
+					})
+				}
+			});
+		} else {
+			uni.showToast({
+				title: '用户拒绝授权',
+				icon: 'none'
+			});
+		}
+	}
+}
 </script>
 
 <style lang="scss">

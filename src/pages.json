@@ -16,12 +16,18 @@
 			}
 		},
 		{
-				"path" : "pages/user/index",
-				"style" : {
-					"navigationBarTitleText": "个人中心"
-				}
+			"path" : "pages/user/index",
+			"style" : {
+				"navigationBarTitleText": "个人中心"
+			}
+		},
+		{
+			"path" : "pages/timeline/index",
+			"style" : {
+				"navigationBarTitleText": "流水"
+			}
 		}
-    ],
+  ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "uni-app",

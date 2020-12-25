@@ -38,6 +38,18 @@
 			"style" : {
 				"navigationBarTitleText": "增加亲友"
 			}
+		},
+		{
+			"path" : "pages/user/bills/index",
+			"style" : {
+				"navigationBarTitleText": "账单配置"
+			}
+		},
+		{
+			"path" : "pages/user/bills/add",
+			"style" : {
+				"navigationBarTitleText": "新增账单配置"
+			}
 		}
   ],
 	"globalStyle": {

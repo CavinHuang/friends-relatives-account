@@ -27,6 +27,7 @@ export default class Index extends Vue {
 	}
 	onGotUserInfo (e: any) {
 		console.log('aaaaa', e);
+		const _this = this
 		if (e.detail.iv) {
 			this.state.userInfo = e.detail.userInfo;
 			this.state.isLogin = true
@@ -37,6 +38,8 @@ export default class Index extends Vue {
 					commonApi.saveUserInfo({
 						...e.detail.userInfo,
 						jscode: loginRes.code
+					}).then(res => {
+						uni.setStorageSync('userInfo', res)
 					})
 				}
 			});

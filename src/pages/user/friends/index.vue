@@ -1,7 +1,7 @@
 <template>
 	<view class="page-container">
 		<u-index-list :scrollTop="scrollTop" :index-list="indexList">
-			<view v-for="(item, index) in list" :key="index">
+			<view v-for="(item, index) in list" :key="index + 'list'">
 				<u-index-anchor :index="item.letter" />
 				<view class="list-cell u-border-bottom" v-for="(item1, idx) in item.data" :key="idx + 'item'">
 					<view class="user-item">
@@ -12,13 +12,15 @@
 			</view>
 		</u-index-list>
 		<view class="page-footer">
-			<u-button type="success"> +新增 </u-button>
+			<u-button type="success" @click="goTo('/pages/user/friends/add')"> +新增 </u-button>
 		</view>
 	</view>
 </template>
 <script lang="ts">
 import { Component,Vue ,Watch} from "vue-property-decorator";
 import indexList from "@/_tmp";
+import friendApi from '@/global/service/commonService'
+
 const letterArr = indexList.list.map(val => {
 	return val.letter;
 })
@@ -27,6 +29,11 @@ export default class Index extends Vue {
 	scrollTop = 0
 	indexList = letterArr
 	list = indexList.list
+	
+	onShow () {
+		
+	},
+	
 	onPageScroll(e: any) {
 		this.scrollTop = e.scrollTop;
 	}

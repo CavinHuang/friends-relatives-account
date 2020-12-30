@@ -12,5 +12,7 @@ export default {
   // 收藏商品
   collectProduct: `${PREFIX}/v1/collection`,
 	// 保存用户信息
-	saveUser: `${PREFIX}/wechat/saveUserInfo`
+	saveUser: `${PREFIX}/wechat/saveUserInfo`,
+	// 获取亲友列表
+	friendList: `${PREFIX}/friend/lists`,
 };

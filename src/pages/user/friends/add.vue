@@ -18,6 +18,8 @@
 
 <script lang="ts">
 import { Component,Vue ,Watch} from "vue-property-decorator";
+import friendApi from '@/global/service/commonService'
+
 @Component({}) //必须
 export default class Index extends Vue {
 	selectShow = false
@@ -50,6 +52,16 @@ export default class Index extends Vue {
 			label: '未知'
 		}
 	]
+	friends: [],
+	userInfo: null
+	onShow () {
+		this.userInfo = uni.getStorageSync('userInfo')
+		friendApi.lists({
+			uid: this.userInfo.id
+		}).then(res => {
+			console.log(res)
+		})
+	}
 }
 </script>
 

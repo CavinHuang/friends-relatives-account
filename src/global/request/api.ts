@@ -15,4 +15,5 @@ export default {
 	saveUser: `${PREFIX}/wechat/saveUserInfo`,
 	// 获取亲友列表
 	friendList: `${PREFIX}/friend/lists`,
+	addfriend: `${PREFIX}/friend/add`,
 };

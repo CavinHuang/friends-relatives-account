@@ -5,8 +5,11 @@ const friendApi = {
 	// 获取列表
 	lists (uid) {
 		return request.get(API.friendList, { uid })
+	},
+	add (data) {
+		return request.post(API.addfriend, data)
 	}
 }
 
-export default commonApi
+export default friendApi
 

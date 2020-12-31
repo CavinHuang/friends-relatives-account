@@ -30,10 +30,6 @@ export default class Index extends Vue {
 	indexList = letterArr
 	list = indexList.list
 	
-	onShow () {
-		
-	},
-	
 	onPageScroll(e: any) {
 		this.scrollTop = e.scrollTop;
 	}

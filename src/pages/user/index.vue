@@ -38,7 +38,7 @@ export default class Index extends Vue {
 					commonApi.saveUserInfo({
 						...e.detail.userInfo,
 						jscode: loginRes.code
-					}).then(res => {
+					}).then((res):any => {
 						uni.setStorageSync('userInfo', res)
 					})
 				}

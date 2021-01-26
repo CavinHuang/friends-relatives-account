@@ -37,7 +37,6 @@ export default class Index extends Vue {
   onShow() {
     const userInfo = uni.getStorageSync("userInfo");
     friendApi.lists({ uid: userInfo.id }).then((res: any) => {
-      console.log("获取的数据", res);
       this.indexList = res.indexs;
       this.list = res.indexLists;
     });

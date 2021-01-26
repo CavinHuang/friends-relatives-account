@@ -5,9 +5,9 @@
 		</view>
 		<view class="add-cates">
 			<u-cell-group>
-				<u-cell-item icon="share" title="亲友" :arrow="true" arrow-direction="down"></u-cell-item>
-				<u-cell-item icon="share" title="时间" :arrow="true" arrow-direction="down"></u-cell-item>
-				<u-cell-item icon="share" title="备注" :arrow="false" :use-label-slot="true">
+				<u-cell-item icon="man-add-fill" title="亲友" :arrow="true" arrow-direction="down"></u-cell-item>
+				<u-cell-item icon="clock" title="时间" :arrow="true" arrow-direction="down"></u-cell-item>
+				<u-cell-item icon="more-circle-fill" title="备注" :arrow="false" :use-label-slot="true">
 					<u-input v-model="value" type="text" :border="false" />
 				</u-cell-item>
 			</u-cell-group>
